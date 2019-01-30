@@ -24,7 +24,7 @@
             <h1 id="error">Ha ocurrido un error in-desesperado </h1>
             <h1>(屮◉◞益◟◉)屮</h1>
             <p>Por favor vuelve a la página pricipal</p>
-            <p>(; ・_・)―――――――C> <a href="${contexto}" class="enlace">Menú</a></p>
+            <p>(; ・_・)―――――――C> <a href="${contexto}" class="enlace" id="menuError">Menú</a></p>
         </div>
     </center>
 

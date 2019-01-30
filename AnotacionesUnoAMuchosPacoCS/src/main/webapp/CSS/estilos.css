@@ -82,13 +82,17 @@ fieldset{
     display: none;
 }
 
-table{
+table, #pagError{
     background: white;
     opacity: 0.8;
     border-radius: 20px;
     padding: 5%;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+#menuError{
+    color: black;
 }
 
 td{
