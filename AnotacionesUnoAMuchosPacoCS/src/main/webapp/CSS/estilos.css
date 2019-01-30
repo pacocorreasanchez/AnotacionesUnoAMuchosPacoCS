@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
 body{
+    font-family: 'Playfair Display', serif;
+    background-image: url("../IMG/fondo.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%;
+    background-color: black; 
 }
 
 li{
@@ -8,4 +15,85 @@ li{
 
 a:link { 
     text-decoration:none; 
-} 
+}
+
+h2{
+    text-shadow: 5px 0 0 #FFF,  -3px 3px 0 #FFF;
+    margin-top: 2%;
+    font-size: 100px;
+}
+
+a{
+    transition: font-size .5s;
+    color: white;
+    font-size: 70px;
+    text-shadow: 3px 0 0 #000,  -1px 1px 0 #000;
+}
+
+a:hover{
+    transition: font-size .5s;
+    font-size: 80px;
+    text-shadow: 3px 0 0 #000,  -1px 1px 0 #000;
+}
+
+
+.contenedor {
+    margin: auto;
+    display: table;
+}
+
+.me { 
+    position: relative; 
+    float: left;
+    background: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    color: black;
+}
+
+.me span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: white;
+    border-radius: 20px;
+    border-left: 1px solid #000;
+    animation: escribir 4s steps(30);
+}
+
+@keyframes escribir {
+    from { width: 100% }
+}
+
+p > a{
+    display: inline-block;
+    margin-top: 50px;
+    color: white;
+}
+
+pre{
+    font-size: 17px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+fieldset{
+    display: none;
+}
+
+table{
+    background: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+td{
+    font-size: 40px;
+}
+input{
+    font-size: 40px;
+}

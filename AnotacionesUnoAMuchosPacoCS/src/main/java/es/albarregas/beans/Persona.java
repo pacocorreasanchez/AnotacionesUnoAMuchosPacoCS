@@ -19,7 +19,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
-import org.hibernate.annotations.IndexColumn;
 
 /**
  *
@@ -36,9 +35,9 @@ public class Persona implements Serializable {
     @Column(name = "nombre", length = 20)
     private String nombre;
 
-    @OneToMany(cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name="idDePersona")
-    @OrderColumn (name = "index")
+    @OrderColumn (name = "orden")
     private List<Libro> libros = new ArrayList<Libro>();
 
     public Long getIdPersona() {

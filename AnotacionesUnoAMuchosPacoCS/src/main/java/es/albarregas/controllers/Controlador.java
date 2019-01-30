@@ -10,7 +10,6 @@ import es.albarregas.beans.Persona;
 import es.albarregas.dao.IGenericoDAO;
 import es.albarregas.daofactory.DAOFactory;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -72,13 +71,13 @@ public class Controlador extends HttpServlet {
                 url = "index.jsp";
                 break;
             case "delete":
-                persona = (Persona) gdao.getById(Integer.parseInt(request.getParameter("registro")), Persona.class);
+                persona = (Persona) gdao.getById(Long.parseLong(request.getParameter("registro")), Persona.class);
                 gdao.delete(persona);
                 url = "index.jsp";
                 break;
             case "update":
-                persona = (Persona) gdao.getById(Integer.parseInt(request.getParameter("registro")), Persona.class);
-                request.setAttribute("persona", persona);
+                persona = (Persona) gdao.getById(Long.parseLong(request.getParameter("registro")), Persona.class);
+                request.setAttribute("personas", persona);
                 url = "JSP/finActualizar.jsp";
                 break;
         }

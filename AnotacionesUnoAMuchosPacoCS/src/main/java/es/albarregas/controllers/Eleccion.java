@@ -9,15 +9,12 @@ import es.albarregas.beans.Persona;
 import es.albarregas.dao.IGenericoDAO;
 import es.albarregas.daofactory.DAOFactory;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -49,12 +46,6 @@ public class Eleccion extends HttpServlet {
             case "delete":
             case "update":
             case "list":
-                /*String entidad = "Persona";
-                List<Persona> listaPersonas = new ArrayList<>();
-                List<Object> lista = gdao.get(entidad);
-                for (Object persona : lista) {
-                    listaPersonas.add((Persona) persona);
-                }*/
                 List<Persona> listaPersonas = gdao.get("Persona");
                 request.setAttribute("listaPersonas", listaPersonas);
         }
